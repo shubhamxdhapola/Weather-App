@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 function getTime(timestamp) {
     const date = new Date(timestamp * 1000);
         return date.toLocaleString([], {  
