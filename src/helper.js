@@ -11,7 +11,7 @@ function getTime(timestamp) {
 }
 
 export async function fetchWeatherInfo(city) {
-    let API_KEY = 'a87860f0cbe6516bb3220f5f9a79f5e0'
+    let API_KEY = process.env.API_KEY
     let API_URL = `https://api.openweathermap.org/data/2.5/weather`
 
     try {
