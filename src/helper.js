@@ -1,6 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 function getTime(timestamp) {
     const date = new Date(timestamp * 1000);
         return date.toLocaleString([], {  
@@ -14,7 +11,7 @@ function getTime(timestamp) {
 }
 
 export async function fetchWeatherInfo(city) {
-    let API_KEY = process.env.API_KEY
+    let API_KEY = import.meta.env.VITE_API_KEY
     let API_URL = `https://api.openweathermap.org/data/2.5/weather`
 
     try {
