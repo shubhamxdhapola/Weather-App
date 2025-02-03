@@ -7,6 +7,7 @@ This is a Weather App built with React that allows users to check the weather in
 - Get real-time weather updates for any city.
 - Displays key weather data such as temperature, humidity, wind speed, and weather condition.
 - Interactive and responsive user interface built with React.
+- Displays the current time, date, month, and year alongside weather details.
 - Uses the OpenWeather API to fetch weather data.
 
 ## Technologies Used
