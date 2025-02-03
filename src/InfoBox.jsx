@@ -3,15 +3,15 @@ import WeatherDetailsRight from "./WeatherDetailsRight";
 import WeatherDetailsLeft from "./WeatherDetailsLeft";
 import SunriseAndSunset from "./SunriseAndSunset";
 
-export default function InfoBox({ info }) {
+export default function InfoBox({ weatherInfo }) {
     return (
         <>
-            <HeaderInfo info={info} />
+            <HeaderInfo weatherInfo={weatherInfo} />
             <div className="weather-details">
-               <WeatherDetailsLeft info={info} />
-               <WeatherDetailsRight info={info} />
+               <WeatherDetailsLeft weatherInfo={weatherInfo} />
+               <WeatherDetailsRight weatherInfo={weatherInfo} />
             </div>
-            <SunriseAndSunset info={info}/>
+            <SunriseAndSunset weatherInfo={weatherInfo}/>
 
         </>
     );

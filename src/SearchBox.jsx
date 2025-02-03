@@ -4,7 +4,6 @@ import * as Helper from './helper.js'
 export default function SearchBox({ getWeatherInfo }) {
 
     let [city, setCity] = useState('')
-    let[timeAndDate, setTimeAndDate] = useState(Helper.getCurrentTime)
 
     function handleOnChange(e) {
         setCity(e.target.value)
@@ -17,15 +16,8 @@ export default function SearchBox({ getWeatherInfo }) {
         setCity('')
     }
 
-    setInterval(()=>{
-        setTimeAndDate(Helper.getCurrentTime)
-    }, 1000)
-
     return (
         <>
-        <div className='current-time'>
-            <p>{timeAndDate}</p>
-        </div>
         <form onSubmit={handleOnSubmit}>
             <div className="search-form">
                 <input

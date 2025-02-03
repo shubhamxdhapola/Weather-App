@@ -1,6 +1,7 @@
 import SearchBox from './SearchBox.jsx'
 import InfoBox from './InfoBox.jsx'
 import Error from './Error.jsx'
+import CurrentTime from './CurrentTime.jsx'
 import { useState } from "react"
 
 export default function WeatherApp() {
@@ -10,12 +11,13 @@ export default function WeatherApp() {
     
     return(
         <>
+            <CurrentTime />
             <SearchBox getWeatherInfo={getWeatherInfo}/>
             {
                 Object.keys(weatherInfo).length > 0 && 
                 ( weatherInfo.error 
                     ? <Error errMsg={weatherInfo.error} /> 
-                    : <InfoBox info={weatherInfo}/>
+                    : <InfoBox weatherInfo={weatherInfo}/>
                 )
             }
         </>

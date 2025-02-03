@@ -1,4 +1,4 @@
-function getTime(timestamp) {
+function formatWeatherTime(timestamp) {
     const date = new Date(timestamp * 1000);
         return date.toLocaleString([], {  
             weekday: "short", 
@@ -17,22 +17,23 @@ export async function fetchWeatherInfo(city) {
     try {
         let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
         let data = await response.json()
+        console.log(data)
         if(data.cod === '404') throw new Error(data.message)
         return {
-            id : data.weather[0].id,
-            city: city,
+            weatherID : data.weather[0].id,
+            cityName: city,
             humidity: data.main.humidity,
-            temp: data.main.temp,
+            temperature: data.main.temp,
             feelsLike: data.main.feels_like,
             visibility : data.visibility,
-            weatherDesc: data.weather[0].description,
+            weatherDescription: data.weather[0].description,
             pressure : data.main.pressure,
-            weather: data.weather[0].main,
-            sunset: getTime(data.sys.sunset),
+            weatherCondition: data.weather[0].main,
+            sunsetTime: formatWeatherTime(data.sys.sunset),
             windSpeed: data.wind.speed,
-            currentTime : getTime(data.dt),
+            lastUpdatedTime : formatWeatherTime(data.dt),
             isDayOrNight : data.weather[0].icon,
-            sunrise: getTime(data.sys.sunrise),
+            sunriseTime: formatWeatherTime(data.sys.sunrise),
         }
     } catch(err){
         return {error : err.message}

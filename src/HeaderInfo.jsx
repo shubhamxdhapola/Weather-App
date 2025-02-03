@@ -1,28 +1,28 @@
 import { getWeatherImage, getWeatherIcon } from "./helper.js"
 
-export default function HeaderInfo({info}) {
+export default function HeaderInfo({weatherInfo}) {
     return (
         <>
             <div className="header">
                 <div className="weather-and-image">
                     <div className="loc-temp-cond">
                         <div className="city-and-icon">
-                            <h1 className="city" >{info.city}</h1>
+                            <h1 className="city" >{weatherInfo.cityName}</h1>
                             <i className="fa-solid fa-location-dot"></i> 
                         </div>
-                        <p className="temperature">{info.temp}&deg;</p>
+                        <p className="temperature">{weatherInfo.temperature}&deg;</p>
                         <p className="condition">
-                            <span> {info.weather} </span> 
-                            <i className={getWeatherIcon(info.weather, info.isDayOrNight)}></i>
+                            <span> {weatherInfo.weatherCondition} </span> 
+                            <i className={getWeatherIcon(weatherInfo.weatherCondition, weatherInfo.isDayOrNight)}></i>
                         </p>
                     </div>
                     <div className="weather-image" >
-                        <img src={getWeatherImage(info.weather, info.isDayOrNight, info.id)} alt={info.weather} width={'80px'}/>
+                        <img src={getWeatherImage(weatherInfo.weatherCondition, weatherInfo.isDayOrNight, weatherInfo.weatherID)} alt={weatherInfo.weatherCondition} width={'80px'}/>
                     </div>
                 </div>
                 <p className="description">
-                    <span>{info.weatherDesc}. Feels like {info.feelsLike}&deg;</span> <br />
-                    <span>Last updated : {info.currentTime}</span>
+                    <span>{weatherInfo.weatherDescription}. Feels like {weatherInfo.feelsLike}&deg;</span> <br />
+                    <span>Last updated : {weatherInfo.lastUpdatedTime}</span>
                 </p>
             </div>
         </>
