@@ -27,32 +27,109 @@ body {
     transition : height 0.8s ease-in
 }
 
-.header{
+
+/* Input Section */
+.wrapper .search-form {
+    display: flex;
+    gap: 5px;
+}
+
+.search-input {
+    flex: 1;
+    height: 45px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: white;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+}
+
+.search-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.search-button:hover {
+    background-color: #2677fa;
+}
+
+
+/*Header Section */
+.wrapper .header {
     text-align: left;
     margin: 20px 0px 20px 0px;
 }
 
-.city {
+.weather-and-image {
+    display: flex;
+    align-items: center;
+}
+
+.weather-and-image 
+.loc-temp-cond, 
+.weather-image {
+    width: 50%;
+}
+
+.weather-and-image .loc-temp-cond .city-and-icon{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.weather-and-image .loc-temp-cond .city {
     font-size: 1.1rem;
     font-weight: 500;
     display: inline-block;
     text-transform: capitalize;
 }
 
-.fa-location-dot{
+.weather-and-image .loc-temp-cond .fa-location-dot{
     font-size: 0.9rem;
 }
 
-.temperature {
+.weather-and-image .loc-temp-cond .temperature {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.condition {
+.weather-and-image .loc-temp-cond .condition {
     font-size: 1rem;
 }
 
-.description {
+.weather-and-image .weather-image {
+    text-align: center;
+}
+
+.weather-and-image .weather-image img{
+    position: relative;
+    animation: animateWeatherImage 1s infinite alternate-reverse;
+}
+
+.header .description {
     text-transform: capitalize;
     font-size: 0.8rem;
     margin-top: 8px;
@@ -77,11 +154,12 @@ body {
 }
 
 .weather-details-box .weather-detail-label {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 5px;
     color: #ffffffcc;
 }
 
+/* Bottom Section  */
 .sunrise-and-sunset{
     background: linear-gradient(to bottom right, #60a5fa, #5490f2);
     border-radius: 10px;
@@ -91,7 +169,7 @@ body {
 }
 
 .sunrise-and-sunset .sun-text{
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #ffffffcc;
     text-align: center;
 }
@@ -101,51 +179,13 @@ body {
     font-size: 15px;
 }
 
+.sunrise-and-sunset .sun-icon{
+    font-size: 2.8125rem;
+    color: #ffffffcc;
+}
+
 .weather-details-box .weather-detail-value {
     font-weight: 550;
-}
-.search-form{
-    display: flex;
-    gap: 5px;
-}
-
-.search-input {
-    flex: 1;
-    height: 45px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    outline: none;
-    transition: border-color 0.3s ease;
-    color: white;
-}
-
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.search-input:focus {
-    border-color: #3b82f6;
-}
-.search-button:disabled{
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-.search-button:hover{
-    background-color: #2677fa;
-}
-
-.search-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: white;
-    background-color: #3b82f6;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .current-time{
@@ -154,31 +194,6 @@ body {
     text-transform:  capitalize;
     font-weight: 500;
     font-family: "Share Tech Mono", serif;
-
-}
-
-.weather-and-image{
-    display: flex;
-    align-items: center;
-}
-
-.weather-and-image img{
-    position: relative;
-    animation: animateWeatherImage 1s infinite alternate-reverse;
-}
-
-.weather-and-image .loc-temp-cond, .weather-image{
-    width: 50%;
-}
-
-.weather-and-image .weather-image {
-    text-align: center;
-}
-
-.city-and-icon{
-    display: flex;
-    align-items: center;
-    gap: 4px;
 }
 
 .error {
