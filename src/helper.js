@@ -54,7 +54,7 @@ export function getCurrentTime() {
 
 export function getWeatherImage(weatherCondition, isDayOrNight, weatherID) {
     
-    isDayOrNight = isDayOrNight.slice(-1)
+    isDayOrNight = isDayOrNight.slice(-1)   
     switch(weatherCondition) {
 
         case 'Clear':
@@ -98,6 +98,8 @@ export function getWeatherImage(weatherCondition, isDayOrNight, weatherID) {
 }
 
 export function getWeatherIcon(weather, isDayOrNight) {
+
+    isDayOrNight = isDayOrNight.slice(-1)
     switch (weather) {
 
         case 'Clear': return isDayOrNight === 'd' 
