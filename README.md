@@ -15,7 +15,6 @@ This is a Weather App built with React that allows users to check the weather in
 - **React** for building the user interface.
 - **CSS** for styling.
 - **OpenWeather API** for fetching weather data.
-- **Axios** for making HTTP requests (if used in your project).
 
 ## Installation
 
