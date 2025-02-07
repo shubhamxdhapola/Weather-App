@@ -1,4 +1,4 @@
-import * as Helper from './helper.js'
+import * as Helper from '../../public/scripts/helper.js'
 import { useState } from 'react'
 
 export default function CurrentTime() { 

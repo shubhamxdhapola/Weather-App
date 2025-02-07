@@ -1,4 +1,4 @@
-import { getWeatherImage, getWeatherIcon } from "./helper.js"
+import { getWeatherImage, getWeatherIcon } from "../../public/scripts/helper.js"
 
 export default function HeaderInfo({weatherInfo}) {
     return (

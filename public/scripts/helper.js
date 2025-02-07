@@ -60,41 +60,41 @@ export function getWeatherImage(weatherCondition, isDayOrNight, weatherID) {
 
         case 'Clear':
             return isDayOrNight === 'd' 
-                ? '/clearDay.png' 
-                : '/clearNight.png';
+                ? '/images/clearDay.png' 
+                : '/images/clearNight.png';
     
         case 'Clouds':
             return weatherID === 801 
                 ? isDayOrNight === 'd' 
-                    ? '/cloudyDay.png' 
-                    : '/cloudyNight.png'
-                : '/cloudy.png';
+                    ? '/images/cloudyDay.png' 
+                    : '/images/cloudyNight.png'
+                : '/images/cloudy.png';
     
         case 'Rain':
             return weatherID === 500 
                 ? isDayOrNight === 'd' 
-                    ? '/rainyDay.png' 
-                    : '/rainyNight.png'
-                : '/rain.png';
+                    ? '/images/rainyDay.png' 
+                    : '/images/rainyNight.png'
+                : '/images/rain.png';
     
         case 'Thunderstorm':
             return weatherID === 200 
                 ? isDayOrNight === 'd' 
-                    ? '/thunderstormDay.png' 
-                    : '/thunderstormNight.png'
-                : '/thunderstorm.png';
+                    ? '/images/thunderstormDay.png' 
+                    : '/images/thunderstormNight.png'
+                : '/images/thunderstorm.png';
     
         case 'Snow':
             return weatherID === 600 
                 ? isDayOrNight === 'd' 
-                    ? '/snowDay.png' 
-                    : '/snowNight.png' 
-                : '/snow.png';
+                    ? '/images/snowDay.png' 
+                    : '/images/snowNight.png' 
+                : '/images/snow.png';
     
         default:
             return isDayOrNight === 'd' 
-                ? '/atmosphericConditionDay.png' 
-                : '/atmosphericConditionNight.png';
+                ? '/images/atmosphericConditionDay.png' 
+                : '/images/atmosphericConditionNight.png';
     }
 }
 

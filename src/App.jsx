@@ -1,5 +1,5 @@
-import WeatherApp from './WeatherApp'
-import './style.css'
+import WeatherApp from './components/WeatherApp'
+import '../public/styles/style.css'
 
 function App() {
   

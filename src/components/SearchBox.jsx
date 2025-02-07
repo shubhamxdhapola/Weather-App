@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import * as Helper from './helper.js'
+import * as Helper from '../../public/scripts/helper.js'
 
 export default function SearchBox({ getWeatherInfo }) {
 
