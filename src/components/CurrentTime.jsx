@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 export default function CurrentTime() { 
 
-    let[timeAndDate, setTimeAndDate] = useState(Helper.getCurrentTime)
+    let[timeAndDate, setTimeAndDate] = useState(getCurrentTime)
 
     setInterval(() => {
         setTimeAndDate(getCurrentTime)
