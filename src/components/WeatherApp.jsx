@@ -1,8 +1,8 @@
-import SearchBox from './SearchBox.jsx'
-import InfoBox from './InfoBox.jsx'
-import Error from './Error.jsx'
-import CurrentTime from './CurrentTime.jsx'
-import { useState } from "react"
+import SearchBox from './SearchBox'
+import InfoBox from './InfoBox'
+import Error from './Error'
+import CurrentTime from './CurrentTime'
+import { useState } from 'react'
 
 export default function WeatherApp() {
 

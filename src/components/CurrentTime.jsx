@@ -1,4 +1,4 @@
-import * as Helper from '../../public/scripts/helper.js'
+import {getCurrentTime} from '../../public/scripts/helper.js'
 import { useState } from 'react'
 
 export default function CurrentTime() { 
@@ -6,7 +6,7 @@ export default function CurrentTime() {
     let[timeAndDate, setTimeAndDate] = useState(Helper.getCurrentTime)
 
     setInterval(() => {
-        setTimeAndDate(Helper.getCurrentTime)
+        setTimeAndDate(getCurrentTime)
     }, 1000)
 
     return (

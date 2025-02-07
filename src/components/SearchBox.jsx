@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import * as Helper from '../../public/scripts/helper.js'
+import {fetchWeatherInfo} from '../../public/scripts/helper.js'
 
 export default function SearchBox({ getWeatherInfo }) {
 
@@ -11,7 +11,7 @@ export default function SearchBox({ getWeatherInfo }) {
 
     async function handleOnSubmit(e) {
         e.preventDefault()
-        let weatherInfo = await Helper.fetchWeatherInfo(city)
+        let weatherInfo = await fetchWeatherInfo(city)
         getWeatherInfo(weatherInfo)
         setCity('')
     }
