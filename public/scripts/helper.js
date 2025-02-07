@@ -17,7 +17,7 @@ export async function fetchWeatherInfo(city) {
     try {
         let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
         let data = await response.json()
-        console.log(data)
+        
         if(data.cod === '404') throw new Error(data.message)
         return {
             weatherID : data.weather[0].id,
